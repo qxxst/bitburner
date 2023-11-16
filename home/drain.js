@@ -6,7 +6,7 @@ export async function main(ns) {
 		await ns.hack(target);
     	await ns.grow(target);
 		// Checks if the security level is greater than the minimum before running weaken
-		const securityLevel = await ns.getServerSecurityLevel(target);
+		var securityLevel = await ns.getServerSecurityLevel(target);
 		if (securityLevel > minSecurityLevel) {
 			await ns.weaken(target);
 		}
