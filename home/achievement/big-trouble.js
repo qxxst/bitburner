@@ -2,13 +2,14 @@
 /* Used for the "Big trouble" achievement */
 /* Run after installing augmentations */
 export async function main(ns) {
-	const securityLevel = await ns.getServerSecurityLevel('n00dles')
-	const minSecurityLevel = await ns.getServerSecurityLevel('n00dles');
+	const target = 'n00dles'
+	const minSecurityLevel = await ns.getServerMinSecurityLevel(target)
 	while (true) {
-		await ns.hack('n00dles');
+		await ns.hack(target);
 		// Checks if the security level is greater than the minimum before running weaken
+		const securityLevel = await ns.getServerSecurityLevel(target);
 		if (securityLevel > minSecurityLevel) {
-			await ns.weaken('n00dles');
+			await ns.weaken(target);
 		}
 	}
 }
