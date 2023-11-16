@@ -37,4 +37,4 @@ top                                  Displays all running scripts and their RAM 
 unalias [alias name]                 Deletes the specified alias
 vim [file ...]                       Text editor - Open up and edit one or more scripts or text files in vim mode
 weaken                               Reduce the security of the current machine
-wget [url] [target file]             Retrieves code/text from a web server```
+wget [url] [target file]             Retrieves code/text from a web server

@@ -7,4 +7,4 @@ ServerProfiler.exe - [OWNED] - Displays detailed server information.
 DeepscanV1.exe - [OWNED] - Enables 'scan-analyze' with a depth up to 5.
 DeepscanV2.exe - $25.000m - Enables 'scan-analyze' with a depth up to 10.
 AutoLink.exe - [OWNED] - Enables direct connect via 'scan-analyze'.
-Formulas.exe - $5.000b - Unlock access to the formulas API.```
+Formulas.exe - $5.000b - Unlock access to the formulas API.
