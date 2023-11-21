@@ -28,7 +28,7 @@ export async function main(ns) {
         await ns.sleep(60000);
     }
 
-    for (let i = 0; i < servers1Port.length; ++i) {
+    for (let i = 0; i < servers2Port.length; ++i) {
         const serv = servers2Port[i];
         ns.exec("nuke.js", serv);
     }
