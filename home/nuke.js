@@ -1,6 +1,7 @@
 /** @param {NS} ns */
 export async function main(ns) {
 	const target = ns.args[0];
+
     if (ns.fileExists("BruteSSH.exe", "home")) {
         ns.brutessh(target);
     }
@@ -16,5 +17,6 @@ export async function main(ns) {
     if (ns.fileExists("SQLInject.exe", "home")) {
         ns.sqlinject(target);
     }
+    
     ns.nuke(target);
 }
