@@ -5,11 +5,11 @@ export async function main(ns) {
 	const moneyThreshold = await ns.getServerMaxMoney(target);
 
 	while (true) {
-		// Checks if the security level is greater than the minimum before running weaken
 		var securityLevel = await ns.getServerSecurityLevel(target);
+		var moneyAvailable = await ns.getServerMoneyAvailable(target)
 		if (securityLevel > minSecurityLevel) {
 			await ns.weaken(target);
-		} else if (moneyThreshold > ns.getServerMoneyAvailable(target)) {
+		} else if (moneyThreshold > moneyAvailable) {
     		await ns.grow(target);
 		} else {
 			await ns.hack(target);
