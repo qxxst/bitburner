@@ -2,7 +2,8 @@
 export async function main(ns) {
 	const target = ns.args[0];
 	const minSecurityLevel = await ns.getServerMinSecurityLevel(target);
-	const moneyThreshold = await ns.getServerMaxMoney(target);
+	const maxMoney = await ns.getServerMaxMoney(target);
+	const moneyThreshold = maxMoney * 0.01;
 
 	while (true) {
 		var securityLevel = await ns.getServerSecurityLevel(target);
