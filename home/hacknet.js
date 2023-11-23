@@ -5,5 +5,8 @@ export async function main(ns) {
         var nodes = ns.numNodes();
         var remainingNodes = maxNodes - nodes;
         remainingNodes = Math.max(remainingNodes, 0);
+        if (remainingNodes > 0) {
+            await ns.purchaseNode(remainingNodes);
+        }
     }
 }
