@@ -1,3 +1,4 @@
+// lib/helpers.js (originally helpers.js) by alainbryden
 /**
  * Return a formatted representation of the monetary amount using scale symbols (e.g. $6.50M)
  * @param {number} num - The number to format

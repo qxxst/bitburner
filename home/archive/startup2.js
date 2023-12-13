@@ -1,3 +1,4 @@
+// startup2.js by qxxst
 /** @param {NS} ns */
 export async function main(ns) {
     const home = "home";

@@ -1,3 +1,4 @@
+// find-server.js (originally find_server.js) by hydroflame
 function recursiveScan(ns, parent, server, target, route) {
     const children = ns.scan(server);
     for (let child of children) {

@@ -1,3 +1,4 @@
+// deploy.js by hydroflame. Modified by qxxst
 /** @param {NS} ns **/
 export async function main(ns) {
 	const host = ns.args[0];

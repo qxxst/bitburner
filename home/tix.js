@@ -1,3 +1,4 @@
+// tix.js (originally stockmaster.js) by alainbryden. Modified by qxxst
 import {
     instanceCount, getConfiguration, getNsDataThroughFile, runCommand, getActiveSourceFiles, tryGetBitNodeMultipliers,
     formatMoney, formatNumberShort, formatDuration, getStockSymbols

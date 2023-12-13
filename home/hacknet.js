@@ -1,3 +1,4 @@
+// hacknet.js (originally main.js) by michalpostek
 /** @param {NS} ns **/
 export async function main(ns) {
 	// helpers

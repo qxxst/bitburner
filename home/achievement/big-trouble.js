@@ -1,3 +1,4 @@
+// achievement/big-trouble.js by qxxst
 /** @param {NS} ns */
 /* Used for the "Big trouble" achievement */
 /* Run after installing augmentations */
