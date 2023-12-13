@@ -1,8 +1,8 @@
 /** @param {NS} ns **/
 export async function main(ns) {
 	const host = ns.args[0];
-	const script = "scp/drain.js"
-    const home = "home"
+	const script = "scp/drain.js";
+    const home = "home";
 
 	if (!ns.serverExists(host)) {
 		ns.tprint(`Server '${host}' does not exist. Aborting.`);

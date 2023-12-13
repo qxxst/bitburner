@@ -1,6 +1,8 @@
 /** @param {NS} ns */
 export async function main(ns) {
-    const home = "home"
+    const home = "home";
+    const script = "deploy.js";
+    const threads = 1;
 
     ns.exec("hacknet.js", home);
 
@@ -11,9 +13,11 @@ export async function main(ns) {
     const servers4Port = ["syscore"];
     const servers5Port = ["zb-institute"];
 
-    for (let i = 0; i < servers0Port.length; ++i) {
+    var i = 0;
+    while (i < servers0Port.length) {
         let target = servers0Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 
     while (!ns.fileExists("BruteSSH.exe", "home")) {
@@ -21,9 +25,11 @@ export async function main(ns) {
         ns.print("Waiting until BruteSSH.exe is available");
     }
 
-    for (let i = 0; i < servers1Port.length; ++i) {
+    var i = 0;
+    while (i < servers1Port.length) {
         let target = servers1Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 
     while (!ns.fileExists("FTPCrack.exe", "home")) {
@@ -31,9 +37,11 @@ export async function main(ns) {
         ns.print("Waiting until FTPCrack.exe is available");
     }
 
-    for (let i = 0; i < servers2Port.length; ++i) {
+    var i = 0;
+    while (i < servers2Port.length) {
         let target = servers2Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 
     while (!ns.fileExists("relaySMTP.exe", "home")) {
@@ -41,9 +49,11 @@ export async function main(ns) {
         ns.print("Waiting until relaySMTP.exe is available");
     }
 
-    for (let i = 0; i < servers3Port.length; ++i) {
+    var i = 0;
+    while (i < servers3Port.length) {
         let target = servers3Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 
     while (!ns.fileExists("HTTPWorm.exe", "home")) {
@@ -51,9 +61,11 @@ export async function main(ns) {
         ns.print("Waiting until HTTPWorm.exe is available");
     }
 
-    for (let i = 0; i < servers4Port.length; ++i) {
+    var i = 0;
+    while (i < servers4Port.length) {
         let target = servers4Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 
     ns.exec("tix.js", home)
@@ -63,8 +75,10 @@ export async function main(ns) {
         ns.print("Waiting until SQLInject.exe is available");
     }
 
-    for (let i = 0; i < servers5Port.length; ++i) {
+    var i = 0;
+    while (i < servers5Port.length) {
         let target = servers5Port[i];
-        ns.exec("deploy.js", target);
+        ns.exec(script, home, threads, target);
+        i = i + 1;
     }
 }
