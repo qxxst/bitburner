@@ -12,7 +12,7 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("BruteSSH.exe")) {
+    while (!ns.fileExists("BruteSSH.exe", "home")) {
         await ns.sleep(1);
     }
 
@@ -21,7 +21,7 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("FTPCrack.exe")) {
+    while (!ns.fileExists("FTPCrack.exe", "home")) {
         await ns.sleep(1);
     }
 
@@ -30,7 +30,7 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("relaySMTP.exe")) {
+    while (!ns.fileExists("relaySMTP.exe", "home")) {
         await ns.sleep(1);
     }
 
@@ -39,7 +39,7 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("HTTPWorm.exe")) {
+    while (!ns.fileExists("HTTPWorm.exe", "home")) {
         await ns.sleep(1);
     }
 
@@ -48,7 +48,7 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("SQLInject.exe")) {
+    while (!ns.fileExists("SQLInject.exe", "home")) {
         await ns.sleep(1);
     }
 
