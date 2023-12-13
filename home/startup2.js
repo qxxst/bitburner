@@ -16,6 +16,38 @@ export async function main(ns) {
 
     const doNotTarget = ["darkweb", "CSEC", "avmnite-02h", "I.I.I.I", "run4theh111z", "w0r1d_d43m0n"];
 
+    function hasDuplicates(array) {
+        return new Set(array).size !== array.length;
+    }
+    if (hasDuplicates(servers0Port)) {
+        ns.print("Array servers0Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(servers1Port)) {
+        ns.print("Array servers1Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(servers2Port)) {
+        ns.print("Array servers2Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(servers3Port)) {
+        ns.print("Array servers3Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(servers4Port)) {
+        ns.print("Array servers4Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(servers5Port)) {
+        ns.print("Array servers5Port has duplicate values. Please fix this before running this script again.");
+        return
+    }
+    if (hasDuplicates(doNotTarget)) {
+        ns.print("Array doNotTarget has duplicate values. Please fix this before running this script again.");
+        return
+    }
+
     var i = 0;
     while (i < servers0Port.length) {
         let target = servers0Port[i];
