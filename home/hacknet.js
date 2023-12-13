@@ -3,12 +3,14 @@ export async function main(ns) {
 	// helpers
 	const getMoney = () => ns.getPlayer().money;
 	const getProd = (level, ram, cores) => (level * 1.5) * Math.pow(1.035, ram - 1) * ((cores + 5) / 6);
+	// the number of nodes desired before the script stops buying more
+	const nodeThreshold = 20
 	// your production multiplier
 	const PROD_MULTIPLIER = ns.getHacknetMultipliers().production;
 	// maximum waiting time for collecting money for new node (default 30s)
 	const WAITING_TIME = ns.args[0] || 30;
 
-        // check if you have any nodes in your hacknet
+    // check if you have any nodes in your hacknet
 	if (!ns.hacknet.numNodes()) {
 		while (getMoney() < ns.hacknet.getPurchaseNodeCost()) {
 			await ns.sleep(1);
@@ -16,7 +18,12 @@ export async function main(ns) {
 		ns.hacknet.purchaseNode();
 	}
 
-	while (true) {
+	if (ns.hacknet.numNodes() >= nodeThreshold) {
+		ns.tprint ("The node threshold has already been reached.");
+		return;
+	}
+
+	while (ns.hacknet.numNodes() < nodeThreshold) {
 		const ratios = [];
 		let hacknetProduction = 0;
 		// loop through all nodes
