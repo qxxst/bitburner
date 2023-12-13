@@ -4,7 +4,7 @@ export async function main(ns) {
     const script = "deploy.js";
     const threads = 1;
     const sleepTime = 10000;
-    var optimizedTarget = "noodles";
+    var optimizedTarget = "n00dles";
 
     ns.exec("hacknet.js", home);
 
