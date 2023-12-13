@@ -52,7 +52,7 @@ export async function main(ns) {
     var i = 0;
     while (i < servers0Port.length) {
         let target = servers0Port[i];
-        if (!doNotTarget.includes(target)) {
+        if (!doNotTarget.includes(target) && ns.requiredHackingSkill(target) <= ns.getHackingLevel()) {
             ns.exec(script, home, threads, optimizedTarget);
         }
         i = i + 1;
