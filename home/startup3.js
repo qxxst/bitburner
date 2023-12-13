@@ -78,7 +78,7 @@ export async function main(ns) {
 
     while (i < servers1Port.length) {
         let target = servers1Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("BruteSSH.exe", "home")) {
             if (targetThreshold < await ns.getServerMaxMoney(target)) {
                 optimizedTarget = target;
                 targetThreshold = await ns.getServerMaxMoney(target);
@@ -102,7 +102,7 @@ export async function main(ns) {
     var i = 0;
     while (i < servers2Port.length) {
         let target = servers2Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("FTPCrack.exe", "home")) {
             if (targetThreshold < await ns.getServerMaxMoney(target)) {
                 optimizedTarget = target;
                 targetThreshold = await ns.getServerMaxMoney(target);
@@ -126,7 +126,7 @@ export async function main(ns) {
     var i = 0;
     while (i < servers3Port.length) {
         let target = servers3Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("relaySMTP.exe", "home")) {
             if (targetThreshold < await ns.getServerMaxMoney(target)) {
                 optimizedTarget = target;
                 targetThreshold = await ns.getServerMaxMoney(target);
@@ -150,7 +150,7 @@ export async function main(ns) {
     var i = 0;
     while (i < servers4Port.length) {
         let target = servers4Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("HTTPWorm.exe", "home")) {
             if (targetThreshold < await ns.getServerMaxMoney(target)) {
                 optimizedTarget = target;
                 targetThreshold = await ns.getServerMaxMoney(target);
@@ -174,7 +174,7 @@ export async function main(ns) {
     var i = 0;
     while (i < servers5Port.length) {
         let target = servers5Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("SQLInject.exe", "home")) {
             if (targetThreshold < await ns.getServerMaxMoney(target)) {
                 optimizedTarget = target;
                 targetThreshold = await ns.getServerMaxMoney(target);
