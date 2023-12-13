@@ -18,6 +18,7 @@ export async function main(ns) {
 
     while (!ns.fileExists("BruteSSH.exe", "home")) {
         await ns.sleep(1);
+        ns.print("Waiting until BruteSSH.exe is available");
     }
 
     for (let i = 0; i < servers1Port.length; ++i) {
@@ -27,6 +28,7 @@ export async function main(ns) {
 
     while (!ns.fileExists("FTPCrack.exe", "home")) {
         await ns.sleep(1);
+        ns.print("Waiting until FTPCrack.exe is available");
     }
 
     for (let i = 0; i < servers2Port.length; ++i) {
@@ -36,6 +38,7 @@ export async function main(ns) {
 
     while (!ns.fileExists("relaySMTP.exe", "home")) {
         await ns.sleep(1);
+        ns.print("Waiting until relaySMTP.exe is available");
     }
 
     for (let i = 0; i < servers3Port.length; ++i) {
@@ -45,6 +48,7 @@ export async function main(ns) {
 
     while (!ns.fileExists("HTTPWorm.exe", "home")) {
         await ns.sleep(1);
+        ns.print("Waiting until HTTPWorm.exe is available");
     }
 
     for (let i = 0; i < servers4Port.length; ++i) {
@@ -56,6 +60,7 @@ export async function main(ns) {
 
     while (!ns.fileExists("SQLInject.exe", "home")) {
         await ns.sleep(1);
+        ns.print("Waiting until SQLInject.exe is available");
     }
 
     for (let i = 0; i < servers5Port.length; ++i) {
