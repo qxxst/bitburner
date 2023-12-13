@@ -12,17 +12,9 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
-    while (!ns.fileExists("BruteSSH.exe")) {
-        await ns.sleep(1);
-    }
-
     for (let i = 0; i < servers1Port.length; ++i) {
         const serv = servers1Port[i];
         ns.exec("../deploy.js", serv);
-    }
-
-    while (!ns.fileExists("FTPCrack.exe")) {
-        await ns.sleep(1);
     }
 
     for (let i = 0; i < servers2Port.length; ++i) {
