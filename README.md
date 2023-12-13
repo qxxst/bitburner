@@ -8,7 +8,7 @@ Feel free to download these and use them in your own game, or create a pull requ
 Check out the [docs](https://github.com/qxxst/bitburner/tree/main/docs) folder for information on what each script does and how to properly use it.
 ### Additional Resources
 - [help.md](https://github.com/qxxst/bitburner/blob/main/help.md) is a convenient list of all of the commands that would appear when you run `help` in the terminal.
-- [Netscript documentation](https://github.com/qxxst/bitburner-docs)
+- [Netscript documentation](https://github.com/qxxst/bitburner-docs) (forked from the official game source code)
 - [Official game source](https://github.com/bitburner-official/bitburner-src)
 - [Bitburner Steam Community](https://steamcommunity.com/app/1812820/)
 ## Disclaimer
