@@ -12,7 +12,7 @@ export async function main(ns) {
     const servers5Port = ["zb-institute"];
 
     for (let i = 0; i < servers0Port.length; ++i) {
-        const serv = servers0Port[i];
+        let serv = servers0Port[i];
         ns.exec("deploy.js", serv);
     }
 
@@ -22,7 +22,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers1Port.length; ++i) {
-        const serv = servers1Port[i];
+        let serv = servers1Port[i];
         ns.exec("deploy.js", serv);
     }
 
@@ -32,7 +32,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers2Port.length; ++i) {
-        const serv = servers2Port[i];
+        let serv = servers2Port[i];
         ns.exec("deploy.js", serv);
     }
 
@@ -42,7 +42,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers3Port.length; ++i) {
-        const serv = servers3Port[i];
+        let serv = servers3Port[i];
         ns.exec("deploy.js", serv);
     }
 
@@ -52,7 +52,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers4Port.length; ++i) {
-        const serv = servers4Port[i];
+        let serv = servers4Port[i];
         ns.exec("deploy.js", serv);
     }
 
@@ -64,7 +64,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers5Port.length; ++i) {
-        const serv = servers5Port[i];
+        let serv = servers5Port[i];
         ns.exec("deploy.js", serv);
     }
 }
