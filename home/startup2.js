@@ -1,5 +1,9 @@
 /** @param {NS} ns */
 export async function main(ns) {
+    const home = "home"
+
+    ns.exec("hacknet.js", home);
+
     const servers0Port = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "nectar-net", "hong-fang-tea", "harakiri-sushi"];
     const servers1Port = ["neo-net", "zer0", "max-hardware", "iron-gym", "CSEC"];
     const servers2Port = ["phantasy", "omega-net", "silver-helix", "johnson-ortho", "the-hub", "crush-fitness", "avmnite-02h"];
@@ -47,6 +51,8 @@ export async function main(ns) {
         const serv = servers4Port[i];
         ns.exec("deploy.js", serv);
     }
+
+    ns.exec("tix.js", home)
 
     while (!ns.fileExists("SQLInject.exe", "home")) {
         await ns.sleep(1);
