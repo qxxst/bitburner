@@ -12,13 +12,48 @@ export async function main(ns) {
         ns.exec("../deploy.js", serv);
     }
 
+    while (!ns.fileExists("BruteSSH.exe")) {
+        await ns.sleep(1);
+    }
+
     for (let i = 0; i < servers1Port.length; ++i) {
         const serv = servers1Port[i];
         ns.exec("../deploy.js", serv);
     }
 
+    while (!ns.fileExists("FTPCrack.exe")) {
+        await ns.sleep(1);
+    }
+
     for (let i = 0; i < servers2Port.length; ++i) {
         const serv = servers2Port[i];
+        ns.exec("../deploy.js", serv);
+    }
+
+    while (!ns.fileExists("relaySMTP.exe")) {
+        await ns.sleep(1);
+    }
+
+    for (let i = 0; i < servers3Port.length; ++i) {
+        const serv = servers3Port[i];
+        ns.exec("../deploy.js", serv);
+    }
+
+    while (!ns.fileExists("HTTPWorm.exe")) {
+        await ns.sleep(1);
+    }
+
+    for (let i = 0; i < servers4Port.length; ++i) {
+        const serv = servers4Port[i];
+        ns.exec("../deploy.js", serv);
+    }
+
+    while (!ns.fileExists("SQLInject.exe")) {
+        await ns.sleep(1);
+    }
+
+    for (let i = 0; i < servers5Port.length; ++i) {
+        const serv = servers5Port[i];
         ns.exec("../deploy.js", serv);
     }
 }
