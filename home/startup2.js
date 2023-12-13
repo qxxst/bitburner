@@ -12,8 +12,8 @@ export async function main(ns) {
     const servers5Port = ["zb-institute"];
 
     for (let i = 0; i < servers0Port.length; ++i) {
-        let serv = servers0Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers0Port[i];
+        ns.exec("deploy.js", target);
     }
 
     while (!ns.fileExists("BruteSSH.exe", "home")) {
@@ -22,8 +22,8 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers1Port.length; ++i) {
-        let serv = servers1Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers1Port[i];
+        ns.exec("deploy.js", target);
     }
 
     while (!ns.fileExists("FTPCrack.exe", "home")) {
@@ -32,8 +32,8 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers2Port.length; ++i) {
-        let serv = servers2Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers2Port[i];
+        ns.exec("deploy.js", target);
     }
 
     while (!ns.fileExists("relaySMTP.exe", "home")) {
@@ -42,8 +42,8 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers3Port.length; ++i) {
-        let serv = servers3Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers3Port[i];
+        ns.exec("deploy.js", target);
     }
 
     while (!ns.fileExists("HTTPWorm.exe", "home")) {
@@ -52,8 +52,8 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers4Port.length; ++i) {
-        let serv = servers4Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers4Port[i];
+        ns.exec("deploy.js", target);
     }
 
     ns.exec("tix.js", home)
@@ -64,7 +64,7 @@ export async function main(ns) {
     }
 
     for (let i = 0; i < servers5Port.length; ++i) {
-        let serv = servers5Port[i];
-        ns.exec("deploy.js", serv);
+        let target = servers5Port[i];
+        ns.exec("deploy.js", target);
     }
 }
