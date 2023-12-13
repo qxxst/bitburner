@@ -1,6 +1,6 @@
 /** @param {NS} ns */
 export async function main(ns) {
-	const target = ns.args[0];
+	const target = await ns.getHostname();
 	const minSecurityLevel = await ns.getServerMinSecurityLevel(target);
 	const maxMoney = await ns.getServerMaxMoney(target);
 	const moneyThreshold = maxMoney * 0.01;
