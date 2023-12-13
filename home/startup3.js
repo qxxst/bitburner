@@ -194,11 +194,13 @@ export async function main(ns) {
         i = i + 1;
     }
 
+    await ns.sleep(sleepTime);
+
     var i = 0;
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         else {
             if (doNotTarget.includes(target)) {
@@ -220,7 +222,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (!doNotTarget.includes(target)) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         i = i + 1;
     }
@@ -234,7 +236,7 @@ export async function main(ns) {
     while (i < servers2Port.length) {
         let target = servers2Port[i];
         if (!doNotTarget.includes(target)) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         i = i + 1;
     }
@@ -248,7 +250,7 @@ export async function main(ns) {
     while (i < servers3Port.length) {
         let target = servers3Port[i];
         if (!doNotTarget.includes(target)) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         i = i + 1;
     }
@@ -264,7 +266,7 @@ export async function main(ns) {
     while (i < servers4Port.length) {
         let target = servers4Port[i];
         if (!doNotTarget.includes(target)) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         i = i + 1;
     }
@@ -278,7 +280,7 @@ export async function main(ns) {
     while (i < servers5Port.length) {
         let target = servers5Port[i];
         if (!doNotTarget.includes(target)) {
-            ns.exec(script, home, threads, optimizedTarget);
+            ns.exec(script, home, threads, target, optimizedTarget);
         }
         i = i + 1;
     }

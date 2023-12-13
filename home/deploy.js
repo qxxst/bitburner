@@ -3,6 +3,7 @@ export async function main(ns) {
 	const host = ns.args[0];
 	const script = "scp/drain.js";
     const home = "home";
+    const optimizedTarget = ns.args[1];
 
 	if (!ns.serverExists(host)) {
 		ns.tprint(`Server '${host}' does not exist. Aborting.`);
@@ -37,5 +38,5 @@ export async function main(ns) {
         threads = 1;
     }
 	await ns.scp(script, host, home);
-	ns.exec(script, host, threads);
+	ns.exec(script, host, threads, optimizedTarget);
 }
