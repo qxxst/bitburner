@@ -5,7 +5,7 @@ export async function main(ns) {
     const servers2Port = ["phantasy", "omega-net", "silver-helix", "johnson-ortho", "the-hub", "crush-fitness", "avmnite-02h"];
     const servers3Port = ["computek", "netlink", "rothman-uni", "catalyst", "summit-uni", "I.I.I.I"];
     const servers4Port = ["syscore"];
-    const servers5Port = ["zb-institute", "darkweb"];
+    const servers5Port = ["zb-institute"];
 
     for (let i = 0; i < servers0Port.length; ++i) {
         const serv = servers0Port[i];
