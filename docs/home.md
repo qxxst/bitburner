@@ -38,6 +38,8 @@ Runs a series of checks on most* hackable servers to determine a "best" possible
 
 *Will not target servers that cannot currently be hacked (whether that be due to an insufficient hacking level, not enough available ports, or both), servers with no usable RAM, or story-related servers like CSEC.
 
+It is recommended to periodically kill all running scripts and re-run `startup.js` in order to target servers with more money.
+
 ### Usage
 `run startup.js`
 ## tix.js
