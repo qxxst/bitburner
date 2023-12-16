@@ -21,6 +21,7 @@ export async function main(ns) {
     // Do not target servers with no usable RAM, or story-related servers
     const doNotTarget = ["darkweb", "CSEC", "avmnite-02h", "I.I.I.I", "run4theh111z", "w0r1d_d43m0n", "fulcrumassets", "nwo", "clarkinc", "johnson-ortho"];
 
+    // Checks for duplicate values in all arrays before doing anything else
     function hasDuplicates(array) {
         return new Set(array).size !== array.length;
     }
