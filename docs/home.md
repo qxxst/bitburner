@@ -22,7 +22,10 @@ find-server.js:   └ CSEC
 
 If there is no server with the given name, no value will be returned.
 ## hacknet.js
-Used to automatically purchase and upgrade hacknet nodes until a given threshold of nodes have been fully upgraded. Also automatically run as part of `startup.js`.
+Used to automatically purchase and upgrade hacknet nodes until a given threshold of nodes (20 by default) have been fully upgraded. Does nothing if these conditions have already been met. Also automatically run as part of `startup.js`.
+
+The node threshold can be changed from its default value by editing the constant `nodeThreshold` on line 8.
+
 ### Usage
 `run hacknet.js`
 ## nuke.js
