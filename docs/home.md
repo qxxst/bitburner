@@ -34,7 +34,10 @@ Example:
 
 `run nuke.js CSEC`
 ## startup.js
-Runs a series of checks on all hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Also automatically runs `hacknet.js` immediately (will do nothing if the hacknet node threshold has already been reached) and `tix.js` after `BruteSSH.exe`, `FTPCrack.exe`, and `relaySMTP.exe` all become available.
+Runs a series of checks on most* hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Also automatically runs `hacknet.js` immediately (will do nothing if the hacknet node threshold has already been reached) and `tix.js` after `BruteSSH.exe`, `FTPCrack.exe`, and `relaySMTP.exe` all become available.
+
+*Will not target servers that cannot currently be hacked (whether that be due to an insufficient hacking level, not enough available ports, or both), servers with no usable RAM, or story-related servers like CSEC.
+
 ### Usage
 `run startup.js`
 ## tix.js
