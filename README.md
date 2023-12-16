@@ -20,6 +20,6 @@ Although the files in this repository make references to hacking, this repositor
 
 <a href="https://github.com/alainbryden/bitburner-scripts/graphs/contributors"><img src="https://contrib.rocks/image?repo=alainbryden/bitburner-scripts"></a>
 
-<a href="https://github.com/alainbryden/bitburner-official/graphs/contributors"><img src="https://contrib.rocks/image?repo=bitburner-official/bitburner-scripts"></a>
+<a href="https://github.com/bitburner-official/bitburner-scripts/graphs/contributors"><img src="https://contrib.rocks/image?repo=bitburner-official/bitburner-scripts"></a>
 
 <a href="https://github.com/michalpostek/bitburner-hacknet-bot/graphs/contributors"><img src="https://contrib.rocks/image?repo=michalpostek/bitburner-hacknet-bot"></a>
