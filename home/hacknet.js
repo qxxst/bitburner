@@ -19,12 +19,12 @@ export async function main(ns) {
 		ns.hacknet.purchaseNode();
 	}
 
-	if (ns.hacknet.numNodes() >= nodeThreshold) {
+	if (ns.hacknet.numNodes() >= nodeThreshold && ns.hacknet.getNodeStats(19).cores >= 20) {
 		ns.tprint ("The node threshold has already been reached.");
 		return;
 	}
 
-	while (ns.hacknet.numNodes() < nodeThreshold) {
+	while (ns.hacknet.numNodes() < nodeThreshold || ns.hacknet.getNodeStats(19).cores < 20) {
 		const ratios = [];
 		let hacknetProduction = 0;
 		// loop through all nodes
