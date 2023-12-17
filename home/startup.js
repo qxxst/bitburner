@@ -3,7 +3,7 @@
 export async function main(ns) {
     const home = "home";
     const script = "deploy.js";
-    const deployScript = "drain.js";
+    const deployScript = "scp/drain.js";
     const threads = 1;
     const sleepTime = 10000;
     var optimizedTarget = "n00dles";
@@ -78,7 +78,7 @@ export async function main(ns) {
     function cancel(array, script) {
         var i = 0;
         while (i < array.length) {
-            ns.scriptkill(script, array[i]);
+            ns.scriptKill(script, array[i]);
             ns.rm(script, array[i]);
             i = i + 1;
         }
