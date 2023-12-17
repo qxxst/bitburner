@@ -79,6 +79,7 @@ export async function main(ns) {
             i = i + 1;
         }
 
+        var i = 0;
         while (i < servers1Port.length) {
             let target = servers1Port[i];
             if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("BruteSSH.exe", "home")) {
