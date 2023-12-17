@@ -75,6 +75,15 @@ export async function main(ns) {
         return ports
     }
 
+    function cancel(array, script) {
+        var i = 0;
+        while (i < array.length) {
+            ns.scriptkill(script, array[i]);
+            ns.rm(script, array[i]);
+            i = i + 1;
+        }
+    }
+
     function getTarget() {
         var i = 0;
         while (i < servers0Port.length) {
