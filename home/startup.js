@@ -200,6 +200,8 @@ export async function main(ns) {
         }
     }
 
+    getTarget();
+
     var i = 0;
     while (i < servers0Port.length) {
         let target = servers0Port[i];
@@ -221,6 +223,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until BruteSSH.exe is available");
     }
+
+    getTarget();
 
     var i = 0;
     while (i < servers1Port.length) {
@@ -244,6 +248,8 @@ export async function main(ns) {
         ns.print("Waiting until FTPCrack.exe is available");
     }
 
+    getTarget();
+
     var i = 0;
     while (i < servers2Port.length) {
         let target = servers2Port[i];
@@ -265,6 +271,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until relaySMTP.exe is available");
     }
+
+    getTarget();
 
     var i = 0;
     while (i < servers3Port.length) {
@@ -290,6 +298,8 @@ export async function main(ns) {
         ns.print("Waiting until HTTPWorm.exe is available");
     }
 
+    getTarget();
+
     var i = 0;
     while (i < servers4Port.length) {
         let target = servers4Port[i];
@@ -311,6 +321,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until SQLInject.exe is available");
     }
+
+    getTarget();
 
     var i = 0;
     while (i < servers5Port.length) {
