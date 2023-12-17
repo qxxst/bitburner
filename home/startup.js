@@ -84,6 +84,15 @@ export async function main(ns) {
         }
     }
 
+    function cancelAll() {
+        cancel(servers0Port, deployScript);
+        cancel(servers1Port, deployScript);
+        cancel(servers2Port, deployScript);
+        cancel(servers3Port, deployScript);
+        cancel(servers4Port, deployScript);
+        cancel(servers5Port, deployScript);
+    }
+
     function getTarget() {
         var i = 0;
         while (i < servers0Port.length) {
@@ -231,6 +240,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers0Port.length) {
@@ -255,6 +265,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers1Port.length) {
@@ -279,6 +290,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers2Port.length) {
@@ -303,6 +315,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers3Port.length) {
@@ -329,6 +342,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers4Port.length) {
@@ -353,6 +367,7 @@ export async function main(ns) {
     }
 
     getTarget();
+    cancelAll();
 
     var i = 0;
     while (i < servers5Port.length) {
