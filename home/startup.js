@@ -3,6 +3,7 @@
 export async function main(ns) {
     const home = "home";
     const script = "deploy.js";
+    const deployScript = "drain.js";
     const threads = 1;
     const sleepTime = 10000;
     var optimizedTarget = "n00dles";
