@@ -54,147 +54,149 @@ export async function main(ns) {
         return
     }
 
-    var i = 0;
-    while (i < servers0Port.length) {
-        let target = servers0Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+    function getTarget() {
+        var i = 0;
+        while (i < servers0Port.length) {
+            let target = servers0Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
-    }
 
-    while (i < servers1Port.length) {
-        let target = servers1Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("BruteSSH.exe", "home")) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+        while (i < servers1Port.length) {
+            let target = servers1Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("BruteSSH.exe", "home")) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
-    }
 
-    var i = 0;
-    while (i < servers2Port.length) {
-        let target = servers2Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("FTPCrack.exe", "home")) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+        var i = 0;
+        while (i < servers2Port.length) {
+            let target = servers2Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("FTPCrack.exe", "home")) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
-    }
 
-    var i = 0;
-    while (i < servers3Port.length) {
-        let target = servers3Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("relaySMTP.exe", "home")) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+        var i = 0;
+        while (i < servers3Port.length) {
+            let target = servers3Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("relaySMTP.exe", "home")) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
-    }
 
-    var i = 0;
-    while (i < servers4Port.length) {
-        let target = servers4Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("HTTPWorm.exe", "home")) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+        var i = 0;
+        while (i < servers4Port.length) {
+            let target = servers4Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("HTTPWorm.exe", "home")) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
-    }
 
-    var i = 0;
-    while (i < servers5Port.length) {
-        let target = servers5Port[i];
-        if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("SQLInject.exe", "home")) {
-            if (targetThreshold < await ns.getServerMaxMoney(target)) {
-                optimizedTarget = target;
-                targetThreshold = await ns.getServerMaxMoney(target);
-                ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+        var i = 0;
+        while (i < servers5Port.length) {
+            let target = servers5Port[i];
+            if (!doNotTarget.includes(target) && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel() && ns.fileExists("SQLInject.exe", "home")) {
+                if (targetThreshold < await ns.getServerMaxMoney(target)) {
+                    optimizedTarget = target;
+                    targetThreshold = await ns.getServerMaxMoney(target);
+                    ns.print("New target threshold is " + targetThreshold + " on " + optimizedTarget + ".");
+                }
+                else {
+                    ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                }
             }
             else {
-                ns.print(target + " does not have more money available than the current threshold. Moving on.");
+                if (doNotTarget.includes(target)) {
+                    ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
+                }
+                if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+                    ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
+                }
             }
+            i = i + 1;
         }
-        else {
-            if (doNotTarget.includes(target)) {
-                ns.print("Skipping " + target + " because it is in the doNotTarget array. Please remove it from the array if you want to target it.");
-            }
-            if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
-                ns.print("Skipping " + target + " because it requires hacking level " + ns.getServerRequiredHackingLevel(target) + ".");
-            }
-        }
-        i = i + 1;
     }
 
     var i = 0;
