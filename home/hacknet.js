@@ -74,7 +74,7 @@ export async function main(ns) {
 		// check if you can purchase new node
 		const purchaseNodeCost = ns.hacknet.getPurchaseNodeCost();
 		const missingMoneyForNewNode = purchaseNodeCost - getMoney();
-		if (missingMoneyForNewNode < 0) {
+		if (missingMoneyForNewNode < 0 && ns.hacknet.numNodes() < nodeThreshold) {
 			ns.hacknet.purchaseNode();
 		} 
 		// else check if you can buy new node in less than WAITING_TIME (default 30s)
