@@ -54,6 +54,26 @@ export async function main(ns) {
         return
     }
 
+    function getPorts() {
+        let ports = 0;
+        if (ns.fileExists("BruteSSH.exe", "home")) {
+            ports = ports + 1;
+        }
+        if (ns.fileExists("FTPCrack.exe", "home")) {
+            ports = ports + 1;
+        }
+        if (ns.fileExists("relaySMTP.exe", "home")) {
+            ports = ports + 1;
+        }
+        if (ns.fileExists("HTTPWorm.exe", "home")) {
+            ports = ports + 1;
+        }
+        if (ns.fileExists("SQLInject.exe", "home")) {
+            ports = ports + 1;
+        }
+        return ports
+    }
+
     function getTarget() {
         var i = 0;
         while (i < servers0Port.length) {
@@ -219,9 +239,9 @@ export async function main(ns) {
         i = i + 1;
     }
 
-    while (!ns.fileExists("BruteSSH.exe", "home")) {
+    while (getPorts() < 1) {
         await ns.sleep(sleepTime);
-        ns.print("Waiting until BruteSSH.exe is available");
+        ns.print("Waiting until 1 port is available");
     }
 
     getTarget();
@@ -243,9 +263,9 @@ export async function main(ns) {
         i = i + 1;
     }
 
-    while (!ns.fileExists("FTPCrack.exe", "home")) {
+    while (getPorts() < 2) {
         await ns.sleep(sleepTime);
-        ns.print("Waiting until FTPCrack.exe is available");
+        ns.print("Waiting until 2 ports are available");
     }
 
     getTarget();
@@ -267,9 +287,9 @@ export async function main(ns) {
         i = i + 1;
     }
 
-    while (!ns.fileExists("relaySMTP.exe", "home")) {
+    while (getPorts() < 3) {
         await ns.sleep(sleepTime);
-        ns.print("Waiting until relaySMTP.exe is available");
+        ns.print("Waiting until 3 ports are available");
     }
 
     getTarget();
@@ -293,9 +313,9 @@ export async function main(ns) {
 
     ns.exec("tix.js", home)
 
-    while (!ns.fileExists("HTTPWorm.exe", "home")) {
+    while (getPorts() < 4) {
         await ns.sleep(sleepTime);
-        ns.print("Waiting until HTTPWorm.exe is available");
+        ns.print("Waiting until 4 ports are available");
     }
 
     getTarget();
@@ -317,9 +337,9 @@ export async function main(ns) {
         i = i + 1;
     }
 
-    while (!ns.fileExists("SQLInject.exe", "home")) {
+    while (getPorts() < 5) {
         await ns.sleep(sleepTime);
-        ns.print("Waiting until SQLInject.exe is available");
+        ns.print("Waiting until 5 ports are available");
     }
 
     getTarget();
