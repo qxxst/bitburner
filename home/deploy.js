@@ -38,6 +38,6 @@ export async function main(ns) {
     if (threads < 1) {
         threads = 1;
     }
-	await ns.scp(script, host, home);
+	ns.scp(script, host, home);
 	ns.exec(script, host, threads, optimizedTarget);
 }
