@@ -1,4 +1,4 @@
-// gang.js by Shogal
+// combatgang.js by Shogal
 const TASK_TRAIN = "Train Combat";
 const TASK_VIGI = "Vigilante Justice";
 const TASK_NOOB = String.fromCharCode(77) + "ug People";
