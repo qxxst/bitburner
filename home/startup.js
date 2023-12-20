@@ -7,6 +7,7 @@ export async function main(ns) {
     const deployScript = "scp/drain.js";
     const threads = 1;
     const sleepTime = 1000;
+    const stayOn = 1;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
@@ -572,5 +573,11 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+    }
+
+    if (stayOn == 1) {
+        while (true) {
+            await ns.sleep(sleepTime);
+        }
     }
 }
