@@ -33,6 +33,7 @@ export async function main(ns) {
     }
     
     ns.nuke(target);
+    ns.nuke(optimizedTarget);
 
 	var threads = Math.floor((ns.getServerMaxRam(host) - ns.getServerUsedRam(host)) / ns.getScriptRam(script));
     if (threads < 1) {
