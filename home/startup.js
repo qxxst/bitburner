@@ -246,6 +246,8 @@ export async function main(ns) {
         ns.print("Waiting until 1 port is available");
     }
 
+    await ns.sleep(sleepTime);
+
     getTarget();
     cancelAll();
 
@@ -281,6 +283,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until 2 ports are available");
     }
+
+    await ns.sleep(sleepTime);
 
     getTarget();
     cancelAll();
@@ -331,6 +335,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until 3 ports are available");
     }
+
+    await ns.sleep(sleepTime);
 
     getTarget();
     cancelAll();
@@ -398,6 +404,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until 4 ports are available");
     }
+
+    await ns.sleep(sleepTime);
 
     getTarget();
     cancelAll();
@@ -476,6 +484,8 @@ export async function main(ns) {
         await ns.sleep(sleepTime);
         ns.print("Waiting until 5 ports are available");
     }
+
+    await ns.sleep(sleepTime);
 
     getTarget();
     cancelAll();
