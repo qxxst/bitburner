@@ -37,13 +37,17 @@ Example:
 
 `run nuke.js CSEC`
 ## startup.js
-Runs a series of checks on most* hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Repeats this process a few times as more ports become available. Also automatically runs `hacknet.js` immediately (will do nothing if the hacknet node threshold has already been reached) and `tix.js` after at least 3 ports become available.
+Runs a series of checks on most* hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Repeats this process a few times as more ports become available. Also automatically runs other useful home scripts.
 
 *Will not target servers that cannot currently be hacked (whether that be due to an insufficient hacking level, not enough available ports, or both) or servers with no usable RAM. If no other servers can be targeted, the default target is temporarily set to n00dles.
 
 ### Usage
 `run startup.js`
 ## tix.js
-Used to automatically buy and purchase stocks. Requires TIX API access to function properly. Also benefits from having 4S Market Data TIX API access. Run automatically as part of `startup.js`.
+Used to automatically buy and purchase stocks. Requires TIX API access. Also benefits from having 4S Market Data TIX API access. Run automatically as part of `startup.js`.
 ### Usage
 `run tix.js`
+## combatgang.js
+Used to automatically manage a combat gang. Requires SF2. Run automatically as part of `startup.js`.
+### Usage
+`run combatgang.js`
