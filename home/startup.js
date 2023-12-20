@@ -10,6 +10,10 @@ export async function main(ns) {
     var targetThreshold = await ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
 
+    // Kills any previously running instances of hacknet.js and tix.js
+    ns.scriptKill("hacknet.js", home);
+    ns.scriptKill("tix.js", home);
+
     ns.exec("hacknet.js", home);
 
     const servers0Port = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "nectar-net", "hong-fang-tea", "harakiri-sushi"];
