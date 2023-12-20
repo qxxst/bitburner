@@ -1,4 +1,4 @@
-// combatgang.js by Shogal
+// combatgang.js by Shogal. Modified by qxxst
 const TASK_TRAIN = "Train Combat";
 const TASK_VIGI = "Vigilante Justice";
 const TASK_NOOB = String.fromCharCode(77) + "ug People";
@@ -18,7 +18,7 @@ const TRAIN_CHANCE = 0.2;
 const RESPECT_MIN = 2e+6;
 
 const WANTED_PENALTY_THRESHOLD = 0.99;
-const WARFARE_THRESHOLD = 2;
+const WARFARE_THRESHOLD = 1.5;
 
 const MEMBERS_MIN = 6;
 const MEMBERS_MAX = 12;
