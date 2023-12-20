@@ -12,13 +12,15 @@ Example:
 
 `run find-server.js CSEC`
 
-Returns:
+Returns*:
 
 ```Running script with 1 thread(s), pid 25 and args: ["CSEC"].
 find-server.js: home
 find-server.js:  └ sigma-cosmetics
 find-server.js:   └ CSEC
 ```
+
+*The above output is only an example. Some servers have randomized locations on the network that change when you install Augmentations.
 
 If there is no server with the given name, no value will be returned.
 ## hacknet.js
