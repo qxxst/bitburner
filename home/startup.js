@@ -1,8 +1,7 @@
 // startup.js by qxxst
 /** @param {NS} ns */
 export async function main(ns) {
-    const hasSourcefile2 = 1;
-
+    const bitnode = 2;
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
@@ -19,7 +18,7 @@ export async function main(ns) {
 
     ns.exec("hacknet.js", home);
 
-    if (hasSourcefile2 == 1) {
+    if (bitnode == 2) {
         ns.exec("combatgang.js", home);
     }
 
