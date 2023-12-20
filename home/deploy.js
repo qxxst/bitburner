@@ -18,18 +18,23 @@ export async function main(ns) {
     const target = host
     if (ns.fileExists("BruteSSH.exe", "home")) {
         ns.brutessh(target);
+        ns.brutessh(optimizedTarget);
     }
     if (ns.fileExists("FTPCrack.exe", "home")) {
         ns.ftpcrack(target);
+        ns.ftpcrack(optimizedTarget);
     }
     if (ns.fileExists("relaySMTP.exe", "home")) {
         ns.relaysmtp(target);
+        ns.relaysmtp(optimizedTarget);
     }
     if (ns.fileExists("HTTPWorm.exe", "home")) {
         ns.httpworm(target);
+        ns.httpworm(optimizedTarget);
     }
     if (ns.fileExists("SQLInject.exe", "home")) {
         ns.sqlinject(target);
+        ns.sqlinject(optimizedTarget);
     }
     
     ns.nuke(target);
