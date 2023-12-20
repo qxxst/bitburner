@@ -10,9 +10,10 @@ export async function main(ns) {
     var targetThreshold = await ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
 
-    // Kills any previously running instances of hacknet.js and tix.js
+    // Kills any previously running instances of hacknet.js, tix.js, and combatgang.js
     ns.scriptKill("hacknet.js", home);
     ns.scriptKill("tix.js", home);
+    ns.scriptKill("combatgang.js", home);
 
     ns.exec("hacknet.js", home);
 
