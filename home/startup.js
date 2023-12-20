@@ -1,15 +1,24 @@
 // startup.js by qxxst
 /** @param {NS} ns */
 export async function main(ns) {
+    // Declare and initialize constants
     const bitnode = 2;
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
     const threads = 1;
     const sleepTime = 1000;
-    const stayOn = 1;
-    ns.disableLog("sleep");
+    const stayOn = 0;
+    var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
+    ns.disableLog("sleep");
+
+    function resetTarget() {
+        optimizedTarget = "n00dles";
+        targetThreshold = ns.getServerMaxMoney(optimizedTarget);
+    }
+
+    resetTarget();
     ns.print("Starting target threshold is " + targetThreshold + ".");
 
     // Kills any previously running instances of hacknet.js, tix.js, and combatgang.js
@@ -98,8 +107,7 @@ export async function main(ns) {
     }
 
     function getTarget() {
-        // Temporarily sets the optimized target to n00dles in case no other servers are available
-        var optimizedTarget = "n00dles";
+        resetTarget();
         var i = 0;
         while (i < servers0Port.length) {
             let target = servers0Port[i];
