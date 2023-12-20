@@ -8,6 +8,7 @@ export async function main(ns) {
     const threads = 1;
     const sleepTime = 1000;
     const stayOn = 1;
+    ns.disableLog("sleep");
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
