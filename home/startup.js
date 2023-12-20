@@ -1,6 +1,8 @@
 // startup.js by qxxst
 /** @param {NS} ns */
 export async function main(ns) {
+    const hasSourcefile2 = 1;
+
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
@@ -16,6 +18,10 @@ export async function main(ns) {
     ns.scriptKill("combatgang.js", home);
 
     ns.exec("hacknet.js", home);
+
+    if (hasSourcefile2 == 1) {
+        ns.exec("combatgang.js", home);
+    }
 
     const servers0Port = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "nectar-net", "hong-fang-tea", "harakiri-sushi"];
     const servers1Port = ["neo-net", "zer0", "max-hardware", "iron-gym", "CSEC"];
