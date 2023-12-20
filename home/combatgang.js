@@ -65,7 +65,7 @@ export async function main(ns) {
 		defaultTask = ns.args[0];
 	}
 	// Main loop
-	for (;;) {
+	while (true) {
 		// Recruit any member possible 
 		while (gang.canRecruitMember()) {
 			gang.recruitMember('member' + Math.random().toString().substr(2,3));
