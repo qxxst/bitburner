@@ -8,7 +8,7 @@ export async function main(ns) {
     const threads = 1;
     const sleepTime = 10000;
     var optimizedTarget = "n00dles";
-    var targetThreshold = await ns.getServerMaxMoney(optimizedTarget);
+    var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
 
     // Kills any previously running instances of hacknet.js, tix.js, and combatgang.js
@@ -242,7 +242,7 @@ export async function main(ns) {
     }
 
     while (getPorts() < 1) {
-        await ns.sleep(sleepTime);
+        ns.sleep(sleepTime);
         ns.print("Waiting until 1 port is available");
     }
 
@@ -278,7 +278,7 @@ export async function main(ns) {
     }
 
     while (getPorts() < 2) {
-        await ns.sleep(sleepTime);
+        ns.sleep(sleepTime);
         ns.print("Waiting until 2 ports are available");
     }
 
@@ -328,7 +328,7 @@ export async function main(ns) {
     }
 
     while (getPorts() < 3) {
-        await ns.sleep(sleepTime);
+        ns.sleep(sleepTime);
         ns.print("Waiting until 3 ports are available");
     }
 
@@ -394,7 +394,7 @@ export async function main(ns) {
     ns.exec("tix.js", home)
 
     while (getPorts() < 4) {
-        await ns.sleep(sleepTime);
+        ns.sleep(sleepTime);
         ns.print("Waiting until 4 ports are available");
     }
 
@@ -472,7 +472,7 @@ export async function main(ns) {
     }
 
     while (getPorts() < 5) {
-        await ns.sleep(sleepTime);
+        ns.sleep(sleepTime);
         ns.print("Waiting until 5 ports are available");
     }
 
