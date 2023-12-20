@@ -44,6 +44,8 @@ export async function main(ns) {
     if (threads < 1) {
         threads = 1;
     }
+
+    ns.scriptKill(script, host);
 	ns.scp(script, host, home);
 	ns.exec(script, host, threads, optimizedTarget);
 }
