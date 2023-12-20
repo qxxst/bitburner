@@ -9,7 +9,6 @@ export async function main(ns) {
     const sleepTime = 1000;
     const stayOn = 1;
     ns.disableLog("sleep");
-    var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
     ns.print("Starting target threshold is " + targetThreshold + ".");
 
@@ -99,6 +98,8 @@ export async function main(ns) {
     }
 
     function getTarget() {
+        // Temporarily sets the optimized target to n00dles in case no other servers are available
+        var optimizedTarget = "n00dles";
         var i = 0;
         while (i < servers0Port.length) {
             let target = servers0Port[i];
