@@ -11,14 +11,14 @@ const TASK_MANUAL = "Manual/NotReallyTaskName";
 const ASCEND_ON_MPL = 10;
 const EQUIP_AFFORD_COEFF = 100;
 
-const STATS_TRESHOLD = 0.7;
+const STATS_THRESHOLD = 0.7;
 const STATS_MIN = 4000;
 const STATS_HARD_MIN = 200;
 const TRAIN_CHANCE = 0.2;
 const RESPECT_MIN = 2e+6;
 
-const WANTED_PENALTY_TRESHOLD = 0.99;
-const WARFARE_TRESHOLD = 2;
+const WANTED_PENALTY_THRESHOLD = 0.99;
+const WARFARE_THRESHOLD = 2;
 
 const MEMBERS_MIN = 6;
 const MEMBERS_MAX = 12;
@@ -70,7 +70,7 @@ export async function main(ns) {
 		while (gang.canRecruitMember()) {
 			gang.recruitMember('member' + Math.random().toString().substr(2,3));
 		}
-		let bestStats = STATS_MIN / STATS_TRESHOLD; // minimum
+		let bestStats = STATS_MIN / STATS_THRESHOLD; // minimum
 		const members = gang.getMemberNames();
 		const info = gang.getGangInformation();
 		// Ascend if good enough
@@ -104,7 +104,7 @@ export async function main(ns) {
 			if (sum > bestStats) bestStats = sum;
 		}
 		// Check if we are powerful enough
-		let powerfulEnough = info.power >= maxEnemyPower(info) * WARFARE_TRESHOLD;
+		let powerfulEnough = info.power >= maxEnemyPower(info) * WARFARE_THRESHOLD;
 		gang.setTerritoryWarfare(powerfulEnough);
 		// Choose the default task for members
 		let task = defaultTask;
@@ -127,12 +127,12 @@ export async function main(ns) {
 		for (let member of members) {
 			let sum = getStatsSum(member);
 			// Train members, not acceptable in 'noob mode'
-			if (sum < STATS_HARD_MIN || (members.length >= MEMBERS_MIN && sum < bestStats * STATS_TRESHOLD)) {
+			if (sum < STATS_HARD_MIN || (members.length >= MEMBERS_MIN && sum < bestStats * STATS_THRESHOLD)) {
 				setAutoTask(member, TASK_TRAIN);
 				continue;
 			}
 			// Vigi if wanted penalty too large
-			if (info.wantedLevel > 2 && info.wantedPenalty < WANTED_PENALTY_TRESHOLD) {
+			if (info.wantedLevel > 2 && info.wantedPenalty < WANTED_PENALTY_THRESHOLD) {
 				setAutoTask(member, TASK_VIGI);
 				continue;
 			}
