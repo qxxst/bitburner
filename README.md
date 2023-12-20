@@ -1,5 +1,5 @@
 # Bitburner
-Netscript (JavaScript) files used in *Bitburner*.
+Netscript (JavaScript) files used in *Bitburner*. **Contains spoilers.**
 
 Some of the scripts in this repository were made by me, and others were not. I have made a reasonable effort to provide attribution both in this repository and the scripts themselves. No copyright infringement is intended.
 
