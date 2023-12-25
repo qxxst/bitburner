@@ -1,4 +1,4 @@
-// dev-menu.js by yichizhng
+// achievement/dev-menu.js by yichizhng
 /** @param {NS} ns */
 // Used for the "Exploit: You're not meant to access this." achievement
 export async function main(ns) {
