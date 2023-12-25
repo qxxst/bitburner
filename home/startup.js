@@ -30,6 +30,10 @@ export async function main(ns) {
         ns.exec("hacknet.js", home);
     }
 
+    if (bitnode == 8) {
+        ns.exec("tix.js", home);
+    }
+
     if (bitnode == 2) {
         ns.exec("combatgang.js", home);
     }
