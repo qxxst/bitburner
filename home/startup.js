@@ -3,6 +3,7 @@
 export async function main(ns) {
     // Declare and initialize constants
     const currentBitNode = 8;
+    const ownedSourceFiles = [1, 2];
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
