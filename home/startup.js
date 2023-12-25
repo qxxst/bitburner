@@ -2,7 +2,7 @@
 /** @param {NS} ns */
 export async function main(ns) {
     // Declare and initialize constants
-    const bitnode = 2;
+    const bitnode = 8;
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
@@ -26,7 +26,9 @@ export async function main(ns) {
     ns.scriptKill("tix.js", home);
     ns.scriptKill("combatgang.js", home);
 
-    ns.exec("hacknet.js", home);
+    if (!bitnode == 8) {
+        ns.exec("hacknet.js", home);
+    }
 
     if (bitnode == 2) {
         ns.exec("combatgang.js", home);
