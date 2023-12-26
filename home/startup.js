@@ -2,7 +2,7 @@
 /** @param {NS} ns */
 export async function main(ns) {
     // SETTINGS
-    const currentBitNode = 8;
+    const currentBitNode = 8; // Set this to your current BitNode. If you don't know what that is, set it to 1.
     const ownedSourceFiles = [1, 2];
     // Declare and initialize constants
     const home = "home";
