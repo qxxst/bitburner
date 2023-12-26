@@ -4,6 +4,7 @@ export async function main(ns) {
     // SETTINGS
     // Set this to your current BitNode. If you don't know what that is, set it to 1.
     const currentBitNode = 8;
+    // Add all of your SourceFiles to this array. If you don't know what that means, set it to 1.
     const ownedSourceFiles = [1, 2];
     // Declare and initialize constants
     const home = "home";
