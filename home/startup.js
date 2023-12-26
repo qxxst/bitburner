@@ -1,9 +1,10 @@
 // startup.js by qxxst
 /** @param {NS} ns */
 export async function main(ns) {
-    // Declare and initialize constants
+    // SETTINGS
     const currentBitNode = 8;
     const ownedSourceFiles = [1, 2];
+    // Declare and initialize constants
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
