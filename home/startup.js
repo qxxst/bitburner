@@ -15,7 +15,6 @@ export async function main(ns) {
     const stayOn = 0;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
-    var execTixLater = true;
     ns.disableLog("sleep");
 
     function resetTarget() {
@@ -48,6 +47,10 @@ export async function main(ns) {
         ns.exec("tix.js", home);
         // Remind the script to not run tix.js again later
         var execTixLater = false;
+    }
+    else {
+        // Remind the script to run tix.js later
+        var execTixLater = true;
     }
 
     // GENERAL STARTUP TASKS
