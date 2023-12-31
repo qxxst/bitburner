@@ -41,10 +41,12 @@ export async function main(ns) {
         ns.exec("hacknet.js", home);
     }
 
+    // If the current BitNode is 8, or SourceFile 8 is owned, run tix.js immediately.
     if (currentBitNode == 8 || ownedSourceFiles.includes(8)) {
         // Kill hacknet.js again just to be safe
         ns.scriptKill("hacknet.js", home);
         ns.exec("tix.js", home);
+        // Remind the script to not run tix.js again later
         var execTixLater = false;
     }
 
