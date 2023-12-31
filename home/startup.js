@@ -31,6 +31,11 @@ export async function main(ns) {
     ns.scriptKill("tix.js", home);
     ns.scriptKill("combatgang.js", home);
 
+
+    if (currentBitNode == 2) {
+        ns.exec("combatgang.js", home);
+    }
+
     if (!currentBitNode == 8) {
         ns.exec("hacknet.js", home);
     }
@@ -38,10 +43,6 @@ export async function main(ns) {
     if (currentBitNode == 8 || ownedSourceFiles.includes(8)) {
         ns.exec("tix.js", home);
         var execTixLater = false;
-    }
-
-    if (currentBitNode == 2) {
-        ns.exec("combatgang.js", home);
     }
 
     const servers0Port = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "nectar-net", "hong-fang-tea", "harakiri-sushi"];
