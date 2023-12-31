@@ -5,7 +5,7 @@ export async function main(ns) {
     // Set this to your current BitNode. If you don't know what that is, set it to 1.
     const currentBitNode = 8;
     // Add all of your SourceFiles to this array. If you don't know what that means, set it to 1.
-    const ownedSourceFiles = [1, 2];
+    const ownedSourceFiles = [1, 2, 8];
     // Declare and initialize constants
     const home = "home";
     const script = "deploy.js";
@@ -15,6 +15,7 @@ export async function main(ns) {
     const stayOn = 0;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
+    var execTixLater = true;
     ns.disableLog("sleep");
 
     function resetTarget() {
@@ -34,8 +35,9 @@ export async function main(ns) {
         ns.exec("hacknet.js", home);
     }
 
-    if (currentBitNode == 8) {
+    if (currentBitNode == 8 || ownedSourceFiles.includes(8)) {
         ns.exec("tix.js", home);
+        var execTixLater = false;
     }
 
     if (currentBitNode == 2) {
@@ -419,7 +421,9 @@ export async function main(ns) {
     }
 
     await ns.sleep(sleepTime);
-    ns.exec("tix.js", home)
+    if (execTixLater == true) {
+        ns.exec("tix.js", home);
+    }
 
     while (getPorts() < 4) {
         await ns.sleep(sleepTime);
