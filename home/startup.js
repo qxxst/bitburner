@@ -42,6 +42,8 @@ export async function main(ns) {
     }
 
     if (currentBitNode == 8 || ownedSourceFiles.includes(8)) {
+        // Kill hacknet.js again just to be safe
+        ns.scriptKill("hacknet.js", home);
         ns.exec("tix.js", home);
         var execTixLater = false;
     }
