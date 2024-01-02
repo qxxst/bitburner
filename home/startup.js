@@ -273,6 +273,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     while (getPorts() < 1) {
@@ -297,6 +298,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -311,6 +313,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     while (getPorts() < 2) {
@@ -335,6 +338,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -349,6 +353,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -363,6 +368,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     while (getPorts() < 3) {
@@ -387,6 +393,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -401,6 +408,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -415,6 +423,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -429,6 +438,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     await ns.sleep(sleepTimeLong);
@@ -458,6 +468,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -472,6 +483,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -486,6 +498,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -500,6 +513,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -514,6 +528,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     while (getPorts() < 5) {
@@ -538,6 +553,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -552,6 +568,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -566,6 +583,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -580,6 +598,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -594,6 +613,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     var i = 0;
@@ -608,6 +628,7 @@ export async function main(ns) {
             }
         }
         i = i + 1;
+        await ns.sleep(sleepTimeShort);
     }
 
     if (stayOn == 1) {
