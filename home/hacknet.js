@@ -1,6 +1,7 @@
 // hacknet.js (originally main.js) by michalpostek. Modified by qxxst
 /** @param {NS} ns **/
 export async function main(ns) {
+	ns.disableLog("sleep");
 	// helpers
 	const getMoney = () => ns.getPlayer().money;
 	const getProd = (level, ram, cores) => (level * 1.5) * Math.pow(1.035, ram - 1) * ((cores + 5) / 6);
