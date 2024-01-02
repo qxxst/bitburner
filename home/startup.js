@@ -10,7 +10,7 @@ export async function main(ns) {
     // Hacknet nodes do not work in BN 8 and have questionable returns on investment in others.
     const hacknetNotAllowed = [8];
     // Whether or not the script should stay on after completing all tasks
-    const stayOn = 0;
+    const stayOn = true;
 
     // CONSTANTS - DO NOT CHANGE
     const home = "home";
@@ -636,7 +636,7 @@ export async function main(ns) {
         await ns.sleep(sleepTimeShort);
     }
 
-    if (stayOn == 1) {
+    if (stayOn == true) {
         while (true) {
             await ns.sleep(sleepTimeLong);
         }
