@@ -52,7 +52,7 @@ export async function main(ns) {
         ns.exec("combatgang.js", home);
     }
 
-    // Run hacknet.js if the current BitNode isn't 8. Hacknet nodes do not work in BitNode 8.
+    // Run hacknet.js if the current BitNode isn't one that it shouldn't be used in.
     if (!hacknetNotAllowed.includes(currentBitNode)) {
         ns.exec("hacknet.js", home);
     }
