@@ -46,7 +46,7 @@ Runs a series of checks on most* hackable servers to determine a "best" possible
 ### Usage
 `run startup.js`
 ## tix.js
-Used to automatically buy and purchase stocks. Requires TIX API access. Also benefits from having 4S Market Data TIX API access. Run automatically as part of `startup.js`.
+Used to automatically buy and sell stocks to make money over time. Requires TIX API access ($5 billion or SourceFile 8). Strongly benefits from having 4S Market Data TIX API access ($25 billion). Run automatically as part of `startup.js`.
 ### Usage
 `run tix.js`
 ## combatgang.js
