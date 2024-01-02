@@ -39,7 +39,7 @@ Example:
 
 `run nuke.js CSEC`
 ## startup.js
-Runs a series of checks on most* hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Repeats this process a few times as more ports become available. Also automatically runs other useful home scripts.
+Runs a series of checks on most* hackable servers to determine a "best" possible target, then automatically runs `deploy.js` on each of them to gain access and start hacking the optimized target. Repeats this process a few times as more ports become available. Also automatically runs other useful home scripts when applicable.
 
 *Will not target servers that cannot currently be hacked (whether that be due to an insufficient hacking level, not enough available ports, or both) or servers with no usable RAM. If no other servers can be targeted, the default target is temporarily set to n00dles.
 
