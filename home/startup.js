@@ -11,6 +11,8 @@ export async function main(ns) {
     const hacknetNotAllowed = [8];
     // Whether or not the script should stay on after completing all tasks
     const stayOn = true;
+    // Whether or not the sleep function should be logged
+    const logSleep = false;
 
     // CONSTANTS - DO NOT CHANGE
     const home = "home";
@@ -21,7 +23,10 @@ export async function main(ns) {
     const sleepTimeShort = 100;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
-    ns.disableLog("sleep");
+
+    if (logSleep == false) {
+        ns.disableLog("sleep");
+    }
 
     function resetTarget() {
         optimizedTarget = "n00dles";
