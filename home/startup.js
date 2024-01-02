@@ -16,6 +16,7 @@ export async function main(ns) {
     // The amount of time to sleep when "actually" waiting for things to happen
     const sleepTimeLong = 1000;
     // The smaller amount of time to sleep during loops to avoid RAM issues.
+    // This can be lowered if you have lots of RAM on home. On the other hand, if scripts are not being deployed properly, try raising it.
     const sleepTimeShort = 100;
 
     // CONSTANTS - DO NOT CHANGE
