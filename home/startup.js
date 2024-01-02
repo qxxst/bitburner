@@ -16,7 +16,7 @@ export async function main(ns) {
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
-    const threads = 1;
+    const defaultThreads = 1;
     const sleepTimeLong = 1000;
     const sleepTimeShort = 100;
     var optimizedTarget = "n00dles";
@@ -270,7 +270,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -295,7 +295,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -310,7 +310,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -335,7 +335,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -350,7 +350,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -365,7 +365,7 @@ export async function main(ns) {
     while (i < servers2Port.length) {
         let target = servers2Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -390,7 +390,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -405,7 +405,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -420,7 +420,7 @@ export async function main(ns) {
     while (i < servers2Port.length) {
         let target = servers2Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -435,7 +435,7 @@ export async function main(ns) {
     while (i < servers3Port.length) {
         let target = servers3Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -465,7 +465,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -480,7 +480,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -495,7 +495,7 @@ export async function main(ns) {
     while (i < servers2Port.length) {
         let target = servers2Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -510,7 +510,7 @@ export async function main(ns) {
     while (i < servers3Port.length) {
         let target = servers3Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -525,7 +525,7 @@ export async function main(ns) {
     while (i < servers4Port.length) {
         let target = servers4Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -550,7 +550,7 @@ export async function main(ns) {
     while (i < servers0Port.length) {
         let target = servers0Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -565,7 +565,7 @@ export async function main(ns) {
     while (i < servers1Port.length) {
         let target = servers1Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -580,7 +580,7 @@ export async function main(ns) {
     while (i < servers2Port.length) {
         let target = servers2Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -595,7 +595,7 @@ export async function main(ns) {
     while (i < servers3Port.length) {
         let target = servers3Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -610,7 +610,7 @@ export async function main(ns) {
     while (i < servers4Port.length) {
         let target = servers4Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
@@ -625,7 +625,7 @@ export async function main(ns) {
     while (i < servers5Port.length) {
         let target = servers5Port[i];
         if (ns.getServerMaxRam(target) > 0 && ns.getServerRequiredHackingLevel(target) <= ns.getHackingLevel()) {
-            ns.exec(script, home, threads, target, optimizedTarget);
+            ns.exec(script, home, defaultThreads, target, optimizedTarget);
         }
         else {
             if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
