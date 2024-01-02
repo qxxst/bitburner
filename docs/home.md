@@ -50,6 +50,6 @@ Used to automatically buy and sell stocks to make money over time. Requires TIX 
 ### Usage
 `run tix.js`
 ## combatgang.js
-Used to automatically manage a combat gang. Requires SF2. Run automatically as part of `startup.js`.
+Used to automatically manage a combat gang. Requires SourceFile 2. Run automatically as part of `startup.js`.
 ### Usage
 `run combatgang.js`
