@@ -13,14 +13,16 @@ export async function main(ns) {
     const stayOn = true;
     // Whether or not the sleep function should be logged
     const logSleep = false;
+    // The amount of time to sleep when "actually" waiting for things to happen
+    const sleepTimeLong = 1000;
+    // The smaller amount of time to sleep during loops to avoid RAM issues.
+    const sleepTimeShort = 100;
 
     // CONSTANTS - DO NOT CHANGE
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
     const defaultThreads = 1;
-    const sleepTimeLong = 1000;
-    const sleepTimeShort = 100;
 
     // Declare variables
     var optimizedTarget = "n00dles";
