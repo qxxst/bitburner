@@ -21,6 +21,8 @@ export async function main(ns) {
     const defaultThreads = 1;
     const sleepTimeLong = 1000;
     const sleepTimeShort = 100;
+
+    // Declare variables
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
 
