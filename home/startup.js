@@ -9,14 +9,16 @@ export async function main(ns) {
     // BitNodes to avoid using hacknet.js in.
     // Hacknet nodes do not work in BN 8 and have questionable returns on investment in others.
     const hacknetNotAllowed = [8];
-    // Declare and initialize constants
+    // Whether or not the script should stay on after completing all tasks
+    const stayOn = 0;
+
+    // CONSTANTS - DO NOT CHANGE
     const home = "home";
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
     const threads = 1;
     const sleepTimeLong = 1000;
     const sleepTimeShort = 100;
-    const stayOn = 0;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
     ns.disableLog("sleep");
