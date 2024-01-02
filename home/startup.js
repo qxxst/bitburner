@@ -37,7 +37,7 @@ export async function main(ns) {
     }
 
     // Run hacknet.js if the current BitNode isn't 8. Hacknet nodes do not work in BitNode 8.
-    if (!currentBitNode == 8) {
+    if (currentBitNode != 8) {
         ns.exec("hacknet.js", home);
     }
 
