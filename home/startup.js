@@ -3,7 +3,7 @@
 export async function main(ns) {
     // SETTINGS
     // Set this to your current BitNode. If you don't know what that is, set it to 1.
-    const currentBitNode = 8;
+    const currentBitNode = 5;
     // Add all of your SourceFiles to this array. If you don't know what that means, set it to 1.
     const ownedSourceFiles = [1, 2, 8];
     // Declare and initialize constants
@@ -11,7 +11,8 @@ export async function main(ns) {
     const script = "deploy.js";
     const deployScript = "scp/drain.js";
     const threads = 1;
-    const sleepTime = 1000;
+    const sleepTimeLong = 1000;
+    const sleepTimeShort = 100;
     const stayOn = 0;
     var optimizedTarget = "n00dles";
     var targetThreshold = ns.getServerMaxMoney(optimizedTarget);
@@ -275,11 +276,11 @@ export async function main(ns) {
     }
 
     while (getPorts() < 1) {
-        await ns.sleep(sleepTime);
+        await ns.sleep(sleepTimeLong);
         ns.print("Waiting until 1 port is available");
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
 
     getTarget();
     cancelAll();
@@ -313,11 +314,11 @@ export async function main(ns) {
     }
 
     while (getPorts() < 2) {
-        await ns.sleep(sleepTime);
+        await ns.sleep(sleepTimeLong);
         ns.print("Waiting until 2 ports are available");
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
 
     getTarget();
     cancelAll();
@@ -365,11 +366,11 @@ export async function main(ns) {
     }
 
     while (getPorts() < 3) {
-        await ns.sleep(sleepTime);
+        await ns.sleep(sleepTimeLong);
         ns.print("Waiting until 3 ports are available");
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
 
     getTarget();
     cancelAll();
@@ -430,17 +431,17 @@ export async function main(ns) {
         i = i + 1;
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
     if (execTixLater == true) {
         ns.exec("tix.js", home);
     }
 
     while (getPorts() < 4) {
-        await ns.sleep(sleepTime);
+        await ns.sleep(sleepTimeLong);
         ns.print("Waiting until 4 ports are available");
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
 
     getTarget();
     cancelAll();
@@ -516,11 +517,11 @@ export async function main(ns) {
     }
 
     while (getPorts() < 5) {
-        await ns.sleep(sleepTime);
+        await ns.sleep(sleepTimeLong);
         ns.print("Waiting until 5 ports are available");
     }
 
-    await ns.sleep(sleepTime);
+    await ns.sleep(sleepTimeLong);
 
     getTarget();
     cancelAll();
@@ -611,7 +612,7 @@ export async function main(ns) {
 
     if (stayOn == 1) {
         while (true) {
-            await ns.sleep(sleepTime);
+            await ns.sleep(sleepTimeLong);
         }
     }
 }
