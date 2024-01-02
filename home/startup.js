@@ -47,7 +47,8 @@ export async function main(ns) {
     ns.scriptKill("combatgang.js", home);
 
     // BITNODE-SPECIFIC TASKS
-    if (currentBitNode == 2) {
+    // Run combatgang.js if the current BitNode is 2, or SourceFile 2 is owned.
+    if (currentBitNode == 2 || ownedSourceFiles.includes(2)) {
         ns.exec("combatgang.js", home);
     }
 
