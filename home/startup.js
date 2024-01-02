@@ -6,6 +6,9 @@ export async function main(ns) {
     const currentBitNode = 5;
     // Add all of your SourceFiles to this array. If you don't know what that means, set it to 1.
     const ownedSourceFiles = [1, 2, 8];
+    // BitNodes to avoid using hacknet.js in.
+    // Hacknet nodes do not work in BN 8 and have questionable returns on investment in others.
+    const hacknetNotAllowed = [8];
     // Declare and initialize constants
     const home = "home";
     const script = "deploy.js";
@@ -37,7 +40,7 @@ export async function main(ns) {
     }
 
     // Run hacknet.js if the current BitNode isn't 8. Hacknet nodes do not work in BitNode 8.
-    if (currentBitNode != 8) {
+    if (!hacknetNotAllowed.includes(currentBitNode)) {
         ns.exec("hacknet.js", home);
     }
 
