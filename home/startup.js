@@ -77,13 +77,6 @@ export async function main(ns) {
     const servers4Port = ["syscore", "alpha-ent", "global-pharm", "lexo-corp", "snap-fitness", "univ-energy", "nova-med", "unitalife", "zb-def", "aevum-police", ".", "run4theh111z"];
     const servers5Port = ["zb-institute", "galactic-cyber", "deltaone", "taiyang-digital", "aerocorp", "omnia", "icarus", "infocomm", "defcomm", "solaris", "zeus-med", "helios", "omnitek", "powerhouse-fitness", "vitalife", "titan-labs", "microdyne", "blade", "fulcrumtech"];
 
-    const serversUpTo1Port = servers0Port.concat(servers1Port);
-    const serversUpTo2Port = serversUpTo1Port.concat(servers2Port);
-    const serversUpTo3Port = serversUpTo2Port.concat(servers3Port);
-    const serversUpTo4Port = serversUpTo3Port.concat(servers4Port);
-    const serversUpTo5Port = serversUpTo4Port.concat(servers5Port);
-    const allServers = serversUpTo5Port;
-
     // Checks for duplicate values in all arrays before doing anything else
     function hasDuplicates(array) {
         return new Set(array).size !== array.length;
@@ -112,6 +105,13 @@ export async function main(ns) {
         ns.print("Array servers5Port has duplicate values. Please fix this before running this script again.");
         return
     }
+
+    const serversUpTo1Port = servers0Port.concat(servers1Port);
+    const serversUpTo2Port = serversUpTo1Port.concat(servers2Port);
+    const serversUpTo3Port = serversUpTo2Port.concat(servers3Port);
+    const serversUpTo4Port = serversUpTo3Port.concat(servers4Port);
+    const serversUpTo5Port = serversUpTo4Port.concat(servers5Port);
+    const allServers = serversUpTo5Port;
 
     function getPorts() {
         let ports = 0;
