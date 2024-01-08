@@ -17,7 +17,7 @@ Also, some scripts inherently require certain SourceFiles (if you know, you know
 - [Official game source](https://github.com/bitburner-official/bitburner-src)
 - [Bitburner Steam Community](https://steamcommunity.com/app/1812820/)
 ## Disclaimer
-Although the files in this repository make references to hacking, this repository does not contain malware. These scripts are used in a fictional video game about programming.
+Although files in this repository include references to hacking and other crimes, these associations are purely ficticous.
 ## Credits
 <a href="https://github.com/qxxst/bitburner/graphs/contributors"><img src="https://contrib.rocks/image?repo=qxxst/bitburner"></a>
 
