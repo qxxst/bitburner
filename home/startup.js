@@ -49,7 +49,10 @@ export async function main(ns) {
     // BITNODE-SPECIFIC TASKS
     // Run combatgang.js if the current BitNode is 2, or SourceFile 2 is owned.
     if (currentBitNode == 2 || ownedSourceFiles.includes(2)) {
-        ns.exec("combatgang.js", home);
+        // But only if we actually have a gang to run.
+        if (ns.gang.inGang() == true) {
+            ns.exec("combatgang.js", home);
+        }
     }
 
     // Run hacknet.js if the current BitNode isn't one that it shouldn't be used in.
