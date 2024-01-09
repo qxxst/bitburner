@@ -3,7 +3,7 @@ I am aware that the scripts in this repository can be further optimized, so I en
 - The name and/or description of the pull request make a reasonable effort to explain what it does.
 - The script has been tested on your local machine. It is confirmed to be working and does not break the game or have any obvious problems.
 - The script works in the newest "release" version of the game client (not a development branch).
-- The script does not interfere with the effects of other scripts or render them redundant, except when reasonably necessary, such as preventing the attempted use of a feature that is disabled in the current BitNode.
+- The script does not interfere with the effects of other scripts except when reasonably necessary, such as preventing the attempted use of a feature that is disabled in the current BitNode.
 - The purpose(s) of the script can be reasonably determined by its naming convention, inline and/or block comments within the script, and/or respective changes to the markdown files in the `docs` folder that properly explain what the script does.
 
 "Scripts" as used in this text refers to JavaScript files that have been added or changed in your pull request.
